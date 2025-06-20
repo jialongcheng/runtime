@@ -1,19 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFrameworks>net472;net481</TargetFrameworks>
     <PackageId>$(MSBuildProjectName)</PackageId>
     <AssemblyName>System.IO.Packaging</AssemblyName>
     <IsPackable>true</IsPackable>
     <IsShipping>false</IsShipping>
+	<AutoGenerateAssemblyVersion>false</AutoGenerateAssemblyVersion>
     <PackageDescription>This package is for internal use only. Provides classes that support storage of multiple data objects in a single container.</PackageDescription>
     <StringResourcesPath>$(LibrariesProjectRoot)\System.IO.Packaging\src\Resources\Strings.resx</StringResourcesPath>
   </PropertyGroup>
 
   <Import Project="$(LibrariesProjectRoot)\System.IO.Packaging\src\System.IO.Packaging.projitems" />
 
+  <PropertyGroup>
+    <RunApiCompat>false</RunApiCompat>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="$(SystemMemoryVersion)" />
+    <PackageReference Include="System.Memory" Version="4.6.0" />
     <Reference Include="System.IO.Compression" />
   </ItemGroup>
 
