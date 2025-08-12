@@ -283,4 +283,11 @@
     <!-- The package path for python in src/mono/mono.proj needs to be updated if this changes-->
     <EmsdkVersion>3.1.56</EmsdkVersion>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <InformationalVersion>10.0.0.3</InformationalVersion>
+    <AssemblyInformationalVersion>$(InformationalVersion)</AssemblyInformationalVersion>
+  </PropertyGroup>
+
 </Project>

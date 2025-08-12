@@ -17,6 +17,15 @@
     <RunApiCompat>false</RunApiCompat>
   </PropertyGroup>
 
+  <Target Name="ForceFileVersion" AfterTargets="_InitializeAssemblyVersion" Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <PropertyGroup>
+      <FileVersion>10.0.0.3</FileVersion>
+      <Version>10.0.0.3</Version>
+      <AssemblyVersion>10.0.0.3</AssemblyVersion>
+      <PackageVersion>10.0.0.3</PackageVersion>
+    </PropertyGroup>
+  </Target>
+
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.6.0" />
     <Reference Include="System.IO.Compression" />
